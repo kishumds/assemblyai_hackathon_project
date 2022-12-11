@@ -2,9 +2,29 @@ import requests
 import time
 import streamlit as st
 from configure import assemblyaai_api_key
+import base64
+
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
 def app():
+    bin_str = get_base64("background/audio.png")
+    page_bg_img = '''
+        <style>
+        .stApp {
+        background-image: url("data:image/jpg;base64,%s");
+        background-size: cover;;        
+        }
+        </style>
+        ''' % bin_str
+
     st.title("Audio Transcription")
+
+    st.markdown("Audio Transcription using AssemblyAI API.")
+
+    st.markdown(page_bg_img, unsafe_allow_html=True)
 
     upload_endpoint = "https://api.assemblyai.com/v2/upload"
     transcription_endpoint = "https://api.assemblyai.com/v2/transcript"

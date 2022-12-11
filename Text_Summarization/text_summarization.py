@@ -48,7 +48,7 @@ def app():
     button = st.button("Submit")
 
     if button:
-        if text is "":
+        if text == "":
             st.warning("Enter Input...")
             st.stop()
 

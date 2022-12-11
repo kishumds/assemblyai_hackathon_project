@@ -2,3 +2,4 @@ streamlit
 stability-sdk
 Pillow
 torch
+transformers

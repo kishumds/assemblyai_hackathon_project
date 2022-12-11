@@ -1,0 +1,4 @@
+streamlit
+stability-sdk
+Pillow
+torch

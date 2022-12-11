@@ -1,0 +1,2 @@
+assemblyaai_api_key = "8850188864474a47882219a72a8d2b46"
+stablility_ai_api_key = "sk-7tybzH7LJJ3KfVofUFIIOVjFqlznsYuWy3Cr7yb2b0dohxhS"
